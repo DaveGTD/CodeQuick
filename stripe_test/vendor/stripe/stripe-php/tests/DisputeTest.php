@@ -61,11 +61,11 @@ class DisputeTest extends TestCase
 
         $c = $this->createDisputedCharge();
 
-        $d = Dispute::retrieve($c->dispute);
+        $d = $c->dispute;
         $d->evidence["customer_name"] = "Bob";
         $s = $d->save();
 
-        $this->assertSame($c->dispute, $s->id);
+        $this->assertSame($d->id, $s->id);
         $this->assertSame("Bob", $s->evidence["customer_name"]);
     }
 
@@ -74,12 +74,8 @@ class DisputeTest extends TestCase
         self::authorizeFromEnv();
 
         $c = $this->createDisputedCharge();
-        $d = Dispute::retrieve($c->dispute);
 
-        $this->assertNotSame("lost", $d->status);
-
-        $d->close();
-
+        $d = $c->dispute->close();
         $this->assertSame("lost", $d->status);
     }
 
@@ -89,8 +85,7 @@ class DisputeTest extends TestCase
 
         $c = $this->createDisputedCharge();
 
-        $d = Dispute::retrieve($c->dispute);
-
-        $this->assertSame($c->dispute, $d->id);
+        $d = Dispute::retrieve($c->dispute->id);
+        $this->assertSame($d->id, $c->dispute->id);
     }
 }

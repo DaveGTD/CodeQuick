@@ -1,6 +1,6 @@
 <?php
 
-require_once('../stripe-php-master/init.php');
+require_once('vendor/autoload.php');
 
 
 try
