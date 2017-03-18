@@ -13,6 +13,13 @@ include("auth.php");
 <div class="form">
 
 <p>This is where the app starts .</p>
+
+<br>
+
+<a href="fileUpload.php">fileUpload.php</a>
+
+<br>
+
 <p><a href="index.php">Home</a></p>
 <a href="logout.php">Logout</a>
 </div>
