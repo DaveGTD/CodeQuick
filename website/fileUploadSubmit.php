@@ -1,5 +1,5 @@
 <?php
-iinclude("auth.php");
+include("auth.php");
 require('../include_functions.php');
 
 
