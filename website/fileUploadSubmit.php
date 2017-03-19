@@ -4,7 +4,7 @@ require('../include_functions.php');
 
 
 $target_dir = "/uploads/";
-$file_path = "/some_dir/inside_dir/";
+$file_path = "some_dir/inside_dir/";
 $target_file = $target_dir . $file_path . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
