@@ -17,13 +17,15 @@ if(isset($_POST['submit'])){
                 //save the url and the file
                 $filePath = "/uploads/" . date('d-m-Y-H-i-s').'-'.$_FILES['upload']['name'][$i];
 
-								//azure upload
-								uploadCall("nowandthen", $filePath);
 
                 //Upload the file into the temp dir
                 if(move_uploaded_file($tmpFilePath, $filePath)) {
 
                     $files[] = $shortname;
+
+										//azure upload
+										uploadCall("nowandthen", $filePath);
+
                     //insert into db
                     //use $shortname for the filename
                     //use $filePath for the relative url to the file
