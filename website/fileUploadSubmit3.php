@@ -1,4 +1,6 @@
 <?php
+require_once("../include_functions.php");
+
 if(isset($_POST['submit'])){
     if(count($_FILES['upload']['name']) > 0){
         //Loop through each file
@@ -14,6 +16,9 @@ if(isset($_POST['submit'])){
 
                 //save the url and the file
                 $filePath = "/uploads/" . date('d-m-Y-H-i-s').'-'.$_FILES['upload']['name'][$i];
+
+								//azure upload
+								uploadCall("nowandthen", $filePath);
 
                 //Upload the file into the temp dir
                 if(move_uploaded_file($tmpFilePath, $filePath)) {
