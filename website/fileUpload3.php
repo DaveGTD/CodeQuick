@@ -2,7 +2,7 @@
 <html>
 <body>
 
-	<form action="" enctype="multipart/form-data" method="post">
+	<form action="fileUploadSubmit3.php" enctype="multipart/form-data" method="post">
 
 	    <div>
 	        <label for='upload'>Add Attachments:</label>
