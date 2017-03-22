@@ -14,7 +14,7 @@ if (mysqli_connect_errno())
 
 */
 
-uploadCall("nowandthen", "/Users/adave/Code/yahoo1.csv");
+// uploadCall("nowandthen", "/Users/adave/Code/yahoo1.csv");
 
 
 ?>
