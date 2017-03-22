@@ -17,11 +17,11 @@ $blobClient = ServicesBuilder::getInstance()->createBlobService($connectionStrin
 
 // createContainerSample($blobClient);
 
-uploadBlobSample($blobClient);
-
-downloadBlobSample($blobClient);
-
-listBlobsSample($blobClient);
+// uploadBlobSample($blobClient);
+//
+// downloadBlobSample($blobClient);
+//
+// listBlobsSample($blobClient);
 
 function createContainerSample($blobClient)
 {
@@ -93,4 +93,22 @@ function listBlobsSample($blobClient)
         $error_message = $e->getMessage();
         echo $code.": ".$error_message.PHP_EOL;
     }
+}
+
+
+function uploadCall($container, $blob_path)
+{
+	global $blobClient;
+	$content = fopen($blob_path, "r");
+	$blob_name = $blob_path;
+	try
+	{
+		$blobClient->createBlockBlob($container, $blob_name, $content);
+	} catch (Exception $e)
+	{
+		$code = $e->getCode();
+		$error_message = $e->getMessage();
+		echo $code . ": " . $error_message.PHP_EOL;
+	}
+
 }
