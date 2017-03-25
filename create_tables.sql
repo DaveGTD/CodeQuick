@@ -10,3 +10,12 @@ CREATE TABLE users(
 	user_create_date DATETIME NOT NULL,
 	PRIMARY KEY (user_id)
 );
+
+
+CREATE TABLE specialty(
+	specialty_name VARCHAR(255) NOT NULL,
+	support_wns VARCHAR(255),
+	e_and_m_price VARCHAR(255),
+	procedure_price VARCHAR(255),
+	PRIMARY KEY(specialty_name)
+);
