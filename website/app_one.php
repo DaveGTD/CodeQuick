@@ -16,7 +16,7 @@ include("auth.php");
 
 <br>
 
-<a href="fileUpload.php">fileUpload.php</a>
+<a href="CusomterUpload.php">CustomerUpload.php</a>
 
 <br>
 

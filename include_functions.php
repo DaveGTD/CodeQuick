@@ -1,10 +1,9 @@
 <?php
 
-require("azure_php/blob.php");
+require("azure_php/azure_functions.php");
 
-/*
 
-$con = mysqli_connect("localhost", "remote", "remoteroot", "code_quick");
+$con = mysqli_connect("104.154.28.180", "remote", "remoteroot", "code_quick");
 
 // check database connection
 if (mysqli_connect_errno())
@@ -12,9 +11,13 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error() . "\n";
 }
 
-*/
+function construct_blob_path($fileName, $username)
+{
 
-uploadCall("nowandthen", "some_file.txt");
+}
+
+
+// uploadCall("radiology", "some_file.txt");
 
 
 ?>
