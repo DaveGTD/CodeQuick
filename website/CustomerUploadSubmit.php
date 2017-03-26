@@ -3,7 +3,7 @@
 include("auth.php");
 require_once("../include_functions.php");
 
-echo "<br> Hello: " . _SESSION['username'] . "<br>";
+echo "<br> Hello: " . $_SESSION['username'] . "<br>";
 
 if(isset($_POST['submit'])){
     if(count($_FILES['upload']['name']) > 0){
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
                     $files[] = $shortname;
 
 										//azure upload
-										uploadCall("nowandthen", $filePath);
+										uploadCall("radiology", $filePath);
 
                     //insert into db
                     //use $shortname for the filename
