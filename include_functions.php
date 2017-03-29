@@ -11,11 +11,11 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error() . "\n";
 }
 
-upload_file($specialty, $file_name, $user_email, $batch_id)
+function upload_file($specialty, $file_name, $user_email, $batch_id)
 {
-	 // $blob_path = $specialty . "_" . $user_email . "_" . $batch_id . "_" . $file_name;
+	 $blob_path = $specialty . "_" . $user_email . "_" . $batch_id . "_" . $file_name;
 
-	 $azure_upload_status = uploadToAzure($specialty, $file_name);
+	 $azure_upload_status = uploadToAzure($specialty, $blob_path);
 
 	 if($azure_upload_status == true)
 	 {
