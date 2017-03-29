@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
 										$file_name = $shortname;
 										$specialty = 'radiology';
 										$user_email = 'abc@abc.com';
-										$batch_id = new DateTime();
+										$batch_id = time();
 										upload_file($specialty, $file_name, $user_email, $batch_id);
 
                     //insert into db
