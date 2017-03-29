@@ -13,7 +13,8 @@ if (mysqli_connect_errno())
 
 upload_file($specialty, $file_name, $user_email, $batch_id)
 {
-	 $blob_path = $specialty . "_" . $user_email . "_" . $batch_id . "_" . $file_name;
+	 // $blob_path = $specialty . "_" . $user_email . "_" . $batch_id . "_" . $file_name;
+	 $blob_path = "$specialty_$user_email_$batch_id_$file_name";
 	 $azure_upload_status = uploadToAzure($specialty, $blob_path);
 	 if($azure_upload_status == true)
 	 {
