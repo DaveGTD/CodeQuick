@@ -17,7 +17,7 @@ $blobClient = ServicesBuilder::getInstance()->createBlobService($connectionStrin
 
 // container name = name of specialty
 
-function uploadCall($container, $blob_path)
+function uploadToAzure($container, $blob_path)
 {
 	global $blobClient;
 	$content = fopen($blob_path, "r");
