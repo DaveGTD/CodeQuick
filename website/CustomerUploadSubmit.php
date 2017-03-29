@@ -28,7 +28,11 @@ if(isset($_POST['submit'])){
                     $files[] = $shortname;
 
 										//azure upload
-										uploadCall("radiology", $filePath);
+										$file_name = $shortname;
+										$specialty = 'radiology';
+										$user_email = 'abc@abc.com';
+										$batch_id = now();
+										upload_file($specialty, $file_name, $user_email, $batch_id)
 
                     //insert into db
                     //use $shortname for the filename
