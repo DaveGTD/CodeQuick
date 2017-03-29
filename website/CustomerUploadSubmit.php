@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 										$specialty = 'radiology';
 										$user_email = 'abc@abc.com';
 										$batch_id = now();
-										upload_file($specialty, $file_name, $user_email, $batch_id)
+										upload_file($specialty, $file_name, $user_email, $batch_id);
 
                     //insert into db
                     //use $shortname for the filename
