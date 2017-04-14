@@ -3,7 +3,7 @@
     <groupId>com.codequick.dave</groupId>
     <artifactId>copy_azure</artifactId>
     <packaging>jar</packaging>
-    <version>4.0.0</version>
+    <version>1.0.0</version>
     <name>copy_azure</name>
 	<dependencies>
 		<dependency>
